@@ -42,6 +42,10 @@ a:focus {
 p {
   line-height: 1.5;
 }
+
+ul {
+  padding-left: 2.5rem;
+}
 .wrapper {
   background: #4682B4;
   max-width: 960px;
@@ -202,7 +206,8 @@ p {
   overflow: hidden;
   margin-bottom: 2px;
 }
-.main-wrapper h4.job-title {
+.main-wrapper h4.job-title,
+.main-wrapper h4.education-title {
   color: #12548A;
   font-size: 14px;
   margin-top: 2px;
@@ -210,7 +215,8 @@ p {
   font-weight: 500;
   font-style: italic;
 }
-.main-wrapper .job-title {
+.main-wrapper .job-title,
+.main-wrapper .education-title {
   color: #12548A;
   font-size: 16px;
   margin-top: 0;
@@ -256,6 +262,13 @@ p {
   height: 12px;
   background: #6AA0CC;
 }
+
+.skills-section .level-title {
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin: 10px 0;
+}
+
 .footer {
   padding: 30px;
   padding-top: 60px;
