@@ -8,14 +8,17 @@
 */
 /* styles-3.css */
 /* ======= Base ======= */
+@import url(./variables.css);
+
 body {
-  font-family: 'Roboto', sans-serif;
-  color: #545E6C;
+  font-family: var(--font-family);
+  color: var(--color-dark);
   background: #f5f5f5;
   font-size: 14px;
   padding: 30px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 h1,
 h2,
@@ -26,7 +29,7 @@ h6 {
   font-weight: 700;
 }
 a {
-  color: #2B6BA0;
+  color: var(--color-gray-strong);
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
@@ -34,11 +37,16 @@ a {
 }
 a:hover {
   text-decoration: underline;
-  color: #12548A;
+  color: var(--color-gray-strong);
 }
 a:focus {
   text-decoration: none;
 }
+a:visited,
+a:active {
+  color: var(--color-gray-strong);
+}
+
 p {
   line-height: 1.5;
 }
@@ -47,7 +55,7 @@ ul {
   padding-left: 2.5rem;
 }
 .wrapper {
-  background: #4682B4;
+  background: var(--color-gray);;
   max-width: 960px;
   margin: 0 auto;
   position: relative;
@@ -56,22 +64,23 @@ ul {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 .sidebar-wrapper {
-  background: #4682B4;
+  background: var(--color-gray);;
   position: absolute;
   right: 0;
   width: 240px;
   height: 100%;
   min-height: 800px;
-  color: #fff;
+  color: var(--color-white);
 }
 .sidebar-wrapper a {
-  color: #fff;
+  color: var(--color-white);
+  font-size: 11px;
 }
 .sidebar-wrapper .profile-container {
   padding: 30px;
   background: rgba(0, 0, 0, 0.2);
   text-align: center;
-  color: #fff;
+  color: var(--color-white);
 }
 
 .sidebar-wrapper .profile-container picture {
@@ -81,32 +90,32 @@ ul {
 }
 
 .sidebar-wrapper .name {
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 900;
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: var(--space-xs);
 }
 .sidebar-wrapper .tagline {
   color: rgba(255, 255, 255, 0.6);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 0;
 }
 .sidebar-wrapper .profile {
-  margin-bottom: 15px;
-  border-radius: 2px;
+  margin-bottom: var(--space-s);
+  border-radius: 4px;
   max-width: 100%;
   width: 100%;
   height: auto;
 }
 .sidebar-wrapper .contact-list .fa {
-  margin-right: 5px;
+  margin-right: var(--space-xxs);
   font-size: 18px;
   vertical-align: middle;
 }
 .sidebar-wrapper .contact-list li {
-  margin-bottom: 15px;
+  margin-bottom: var(--space-s);
 }
 .sidebar-wrapper .contact-list li:last-child {
   margin-bottom: 0;
@@ -119,18 +128,18 @@ ul {
 }
 .sidebar-wrapper .container-block-title {
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: var(--space-s);
 }
 .sidebar-wrapper .degree {
   font-size: 14px;
   margin-top: 0;
-  margin-bottom: 5px;
+  margin-bottom: var(--space-xs);
 }
 .sidebar-wrapper .education-container .item {
-  margin-bottom: 15px;
+  margin-bottom: var(--space-s);
 }
 .sidebar-wrapper .education-container .item:last-child {
   margin-bottom: 0;
@@ -153,7 +162,7 @@ ul {
   margin-bottom: 0;
 }
 .sidebar-wrapper .languages-list li {
-  margin-bottom: 10px;
+  margin-bottom: var(--space-xs);
 }
 .sidebar-wrapper .languages-list li:last-child {
   margin-bottom: 0;
@@ -162,13 +171,14 @@ ul {
   margin-bottom: 0;
 }
 .sidebar-wrapper .interests-list li {
-  margin-bottom: 10px;
+  margin-bottom: var(--space-xs);
+  font-size: 11px;
 }
 .sidebar-wrapper .interests-list li:last-child {
   margin-bottom: 0;
 }
 .main-wrapper {
-  background: #fff;
+  background: var(--color-white);
   padding: 60px;
   padding-right: 300px;
 }
@@ -176,17 +186,17 @@ ul {
   text-transform: uppercase;
   font-size: 20px;
   font-weight: 500;
-  color: #2B6BA0;
+  color: var(--space-xs);
   position: relative;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: var(--space-l);
 }
 .main-wrapper .section-title .fa {
   width: 30px;
   height: 30px;
   margin-right: 8px;
   display: inline-block;
-  color: #fff;
+  color: var(--color-white);
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -195,7 +205,7 @@ ul {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  background: #2B6BA0;
+  background: var(--color-gray-strong);
   text-align: center;
   padding-top: 8px;
   font-size: 16px;
@@ -203,19 +213,19 @@ ul {
   top: -2px;
 }
 .main-wrapper .section {
-  margin-bottom: 60px;
+  margin-bottom: var(--space-xxl);
 }
 .main-wrapper .experiences-section .item {
-  margin-bottom: 30px;
+  margin-bottom: var(--space-m)
 }
 .main-wrapper .upper-row {
   position: relative;
   overflow: hidden;
-  margin-bottom: 2px;
+  margin-bottom: var(--space-xxs);
 }
 .main-wrapper h4.job-title,
 .main-wrapper h4.education-title {
-  color: #12548A;
+  color: var(--color-gray-strong);
   font-size: 14px;
   margin-top: 2px;
   margin-bottom: 0;
@@ -224,8 +234,8 @@ ul {
 }
 .main-wrapper .job-title,
 .main-wrapper .education-title {
-  color: #12548A;
-  font-size: 16px;
+  color: var(--color-gray-strong);
+  font-size: 15px;
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 500;
@@ -234,26 +244,26 @@ ul {
   position: absolute;
   right: 0;
   top: 0;
-  color: #97AAC3;
+  color: var(--color-gray-light);
 }
 .main-wrapper .company {
-  margin-bottom: 10px;
-  color: #97AAC3;
+  margin-bottom: var(--space-xs);
+  color: var(--color-gray-light);
 }
 .main-wrapper .project-title {
   font-size: 16px;
   font-weight: 400;
   margin-top: 0;
-  margin-bottom: 5px;
+  margin-bottom: var(--space-xs);
 }
 .main-wrapper .projects-section .intro {
   margin-bottom: 30px;
 }
 .main-wrapper .projects-section .item {
-  margin-bottom: 15px;
+  margin-bottom: var(--space-s);
 }
 .skillset .item {
-  margin-bottom: 15px;
+  margin-bottom: var(--space-s);
   overflow: hidden;
 }
 .skillset .level-title {
@@ -282,7 +292,7 @@ ul {
 }
 .footer .copyright {
   line-height: 1.6;
-  color: #2B6BA0;
+  color: var(--color-gray-strong);
   font-size: 13px;
 }
 .footer .fa-heart {
@@ -300,7 +310,7 @@ ul {
   .main-wrapper .time {
     position: static;
     display: block;
-    margin-top: 5px;
+    margin-top: var(--space-xs);
   }
   .main-wrapper .upper-row {
     margin-bottom: 0;
