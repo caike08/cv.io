@@ -134,13 +134,15 @@ ul {
 .print-button:hover {
   background: rgba(255, 255, 255, 0.12);
 }
-.sidebar-wrapper .contact-list .fa {
-  margin-right: var(--space-xxs);
-  font-size: 18px;
-  vertical-align: middle;
-}
 .sidebar-wrapper .contact-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xxs);
   margin-bottom: var(--space-s);
+}
+.sidebar-wrapper .contact-list a {
+  white-space: nowrap;
+  font-size: 11px;
 }
 .sidebar-wrapper .contact-list li:last-child {
   margin-bottom: 0;
