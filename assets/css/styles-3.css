@@ -76,7 +76,7 @@ ul {
 }
 .sidebar-wrapper a {
   color: var(--color-white);
-  font-size: 12px;
+  font-size: 11px;
 }
 .sidebar-wrapper .contact-list .icon {
   width: 17px;
@@ -142,7 +142,6 @@ ul {
 }
 .sidebar-wrapper .contact-list a {
   white-space: nowrap;
-  font-size: 11px;
 }
 .sidebar-wrapper .contact-list li:last-child {
   margin-bottom: 0;
@@ -157,30 +156,9 @@ ul {
   margin-top: 0;
   margin-bottom: var(--space-s);
 }
-.sidebar-wrapper .degree {
-  font-size: 14px;
-  margin-top: 0;
-  margin-bottom: var(--space-xs);
-}
-.sidebar-wrapper .education-container .item {
-  margin-bottom: var(--space-s);
-}
-.sidebar-wrapper .education-container .item:last-child {
-  margin-bottom: 0;
-}
-.sidebar-wrapper .education-container .meta {
-  color: rgba(255, 255, 255, 0.75);
-  font-weight: 500;
-  margin-bottom: 0px;
-  margin-top: 0;
-}
-.sidebar-wrapper .education-container .time {
-  color: rgba(255, 255, 255, 0.75);
-  font-weight: 500;
-  margin-bottom: 0px;
-}
 .sidebar-wrapper .languages-container .lang-desc {
   color: rgba(255, 255, 255, 0.75);
+  font-size: 12px;
 }
 .sidebar-wrapper .languages-list {
   margin-bottom: 0;
@@ -196,7 +174,7 @@ ul {
 }
 .sidebar-wrapper .interests-list li {
   margin-bottom: var(--space-xs);
-  font-size: 11px;
+  font-size: 12px;
 }
 .sidebar-wrapper .interests-list li:last-child {
   margin-bottom: 0;
@@ -248,14 +226,15 @@ ul {
   right: 0;
   top: 0;
   color: var(--color-gray-light);
+  font-size: 13px;
 }
 .main-wrapper .company {
   margin-bottom: var(--space-xs);
   color: var(--color-gray-light);
 }
 .main-wrapper .project-title {
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 600;
   margin-top: 0;
   margin-bottom: var(--space-xs);
 }
@@ -266,8 +245,8 @@ ul {
   margin-bottom: var(--space-s);
 }
 .skills-section .level-title {
-  font-size: 1rem;
-  font-weight: normal;
+  font-size: 15px;
+  font-weight: 500;
   margin: 10px 0;
 }
 
@@ -381,8 +360,6 @@ ul {
   }
 
   .sidebar-wrapper .tagline,
-  .sidebar-wrapper .education-container .meta,
-  .sidebar-wrapper .education-container .time,
   .sidebar-wrapper .languages-container .lang-desc {
     color: rgba(0, 0, 0, 0.8);
   }
