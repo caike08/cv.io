@@ -407,6 +407,13 @@ ul {
     margin-bottom: var(--space-xxs);
   }
 
+  /* Hide content that is not needed on a printed CV */
+  .sidebar-wrapper .interests-container,
+  .main-wrapper .projects-section,
+  .footer {
+    display: none;
+  }
+
   .sidebar-wrapper a,
   .sidebar-wrapper a:visited,
   .sidebar-wrapper a:active {
