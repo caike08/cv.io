@@ -158,13 +158,14 @@ ul {
 }
 .sidebar-wrapper .languages-container .lang-desc {
   color: rgba(255, 255, 255, 0.75);
-  font-size: 12px;
+  font-size: 11px;
 }
 .sidebar-wrapper .languages-list {
   margin-bottom: 0;
 }
 .sidebar-wrapper .languages-list li {
   margin-bottom: var(--space-xs);
+  font-size: 12px;
 }
 .sidebar-wrapper .languages-list li:last-child {
   margin-bottom: 0;
