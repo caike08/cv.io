@@ -320,10 +320,10 @@ ul {
   }
 }
 
-/* Print styles: produce a clean single-column PDF */
+/* Print styles: clean single-column document via Save as PDF */
 @media print {
   @page {
-    margin: 1.2cm;
+    margin: 0.8cm;
   }
 
   body {
@@ -337,16 +337,74 @@ ul {
 
   .wrapper {
     max-width: none;
-    box-shadow: none;
     margin: 0;
+    box-shadow: none;
+    background: #fff;
   }
 
+  /* Sidebar becomes a compact header block */
   .sidebar-wrapper {
     position: static;
-    width: 100%;
+    width: auto;
     min-height: 0;
+    padding: 0;
+    margin-bottom: var(--space-m);
     background: #fff;
     color: var(--color-gray-strong);
+    text-align: left;
+  }
+
+  .sidebar-wrapper .profile-container {
+    display: flex;
+    align-items: center;
+    gap: var(--space-m);
+    padding: 0 0 var(--space-s);
+    background: none;
+    color: var(--color-gray-strong);
+    text-align: left;
+  }
+
+  /* size-capped photo: never let the picture flow to page width */
+  .sidebar-wrapper .profile-container picture {
+    display: block;
+    width: auto;
+    height: auto;
+    flex: none;
+  }
+
+  .sidebar-wrapper .profile {
+    display: block;
+    width: 90px;
+    height: 90px;
+    margin-bottom: 0;
+    border-radius: 50%;
+  }
+
+  .sidebar-wrapper .name {
+    margin-bottom: var(--space-xxs);
+    font-size: 18px;
+  }
+
+  .sidebar-wrapper .tagline,
+  .sidebar-wrapper .languages-container .lang-desc {
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .sidebar-wrapper .contact-container,
+  .sidebar-wrapper .languages-container,
+  .sidebar-wrapper .interests-container {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 var(--space-xl) 0 0;
+  }
+
+  .sidebar-wrapper .container-block-title {
+    font-size: 12px;
+    margin-bottom: var(--space-xxs);
+  }
+
+  .sidebar-wrapper .contact-list li {
+    margin-bottom: var(--space-xxs);
   }
 
   .sidebar-wrapper a,
@@ -355,18 +413,19 @@ ul {
     color: var(--color-gray-strong);
   }
 
-  .sidebar-wrapper .profile-container {
-    background: none;
-    color: var(--color-gray-strong);
-  }
-
-  .sidebar-wrapper .tagline,
-  .sidebar-wrapper .languages-container .lang-desc {
-    color: rgba(0, 0, 0, 0.8);
-  }
-
+  /* Main content follows full width, tight and page-break aware */
   .main-wrapper {
     padding: 0;
+  }
+
+  .main-wrapper .section {
+    margin-bottom: var(--space-m);
+  }
+
+  .main-wrapper .section-title {
+    margin-bottom: var(--space-m);
+    break-after: avoid;
+    page-break-after: avoid;
   }
 
   .main-wrapper .section-icon {
@@ -374,17 +433,20 @@ ul {
     color: var(--color-gray-strong);
   }
 
-  .contact-list .website a::after,
-  .contact-list .linkedin a::after,
-  .contact-list .github a::after {
-    content: " (" attr(href) ")";
-    font-size: 10px;
-    color: rgba(0, 0, 0, 0.6);
+  .main-wrapper .experiences-section .item,
+  .main-wrapper .projects-section .item {
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 
-  .experiences-section .item,
-  .projects-section .item {
-    break-inside: avoid;
+  .footer {
+    padding: var(--space-s) 0 0;
+    text-align: left;
+  }
+
+  .footer .copyright {
+    font-size: 11px;
+    line-height: 1.3;
   }
 }
 /* Extra small devices (phones, less than 768px) */
@@ -409,3 +471,32 @@ ul {
 /* Medium devices (desktops, 992px and up) */
 /* Large devices (large desktops, 1200px and up) */
 /* Ex-Large devices (large desktops, 1200px and up) */
+
+/* Print comes last so it is self-contained and independent of the
+   responsive breakpoints (the printed viewport is ~718 CSS px wide on
+   A4, which would otherwise trigger the phone layout) */
+@media print {
+  .main-wrapper {
+    padding: 0;
+  }
+
+  .main-wrapper .time {
+    position: static;
+    display: block;
+    margin-top: var(--space-xxs);
+  }
+
+  .main-wrapper .upper-row {
+    margin-bottom: 0;
+  }
+
+  /* keep the two skill columns regardless of paper width */
+  .row {
+    margin: 0;
+  }
+
+  .col-sm-6 {
+    width: 50%;
+    padding: 0 var(--space-l) 0 0;
+  }
+}
