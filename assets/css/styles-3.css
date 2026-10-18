@@ -440,8 +440,10 @@ ul {
     color: var(--color-gray-strong);
   }
 
-  .main-wrapper .experiences-section .item,
-  .main-wrapper .projects-section .item {
+  /* Apply page-break avoidance to the li (not just the .item div):
+     when only the inner div avoids breaking, Chromium keeps the li's
+     bullet marker on the previous page while the content moves on. */
+  .main-wrapper ul > li {
     break-inside: avoid;
     page-break-inside: avoid;
   }
